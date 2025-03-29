@@ -1,0 +1,174 @@
+/* Custom styles for Easy MCP Server documentation */
+
+/* Force dark theme with important flags to override RTD theme */
+html, body, .wy-body-for-nav, .wy-nav-content {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+}
+
+.wy-nav-content {
+    background-color: #1e1e1e !important;
+    max-width: 1000px !important;
+}
+
+.wy-nav-content-wrap {
+    background-color: #1e1e1e !important;
+}
+
+/* Set color for all text elements */
+p, span, em, strong, li, dt, dd, blockquote {
+    color: #e0e0e0 !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #e0e0e0 !important;
+}
+
+/* Code elements */
+pre, code, .highlight {
+    background-color: #2d2d2d !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+
+/* All code blocks */
+div.highlight {
+    background-color: #2d2d2d !important;
+    border-radius: 5px !important;
+    padding: 0.5em !important;
+    margin: 1em 0 !important;
+}
+
+pre {
+    background-color: #2d2d2d !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #444 !important;
+    border-radius: 5px !important;
+}
+
+/* Sidebar background */
+.wy-nav-side {
+    background-color: #252525 !important;
+}
+
+/* Sidebar menu items */
+.wy-menu-vertical a {
+    color: #e0e0e0 !important;
+}
+
+.wy-menu-vertical a:hover {
+    background-color: #333 !important;
+}
+
+/* Sidebar search box */
+.wy-side-nav-search {
+    background-color: #222222 !important; /* Dark background */
+}
+
+/* Project title in sidebar */
+.wy-side-nav-search .icon-home, .wy-side-nav-search a.icon-home {
+    color: #76b900 !important; /* NVIDIA green text for the title */
+    font-weight: bold !important;
+    font-size: 1.5em !important;
+    text-shadow: none !important;
+    padding: 8px !important;
+    display: inline-block !important;
+    margin-bottom: 10px !important;
+}
+
+.wy-side-nav-search input[type="text"] {
+    border-color: #555 !important;
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+}
+
+/* NVIDIA style top navigation */
+.wy-nav-top {
+    background-color: #222222 !important; /* Dark background */
+    color: #76b900 !important;
+}
+
+.wy-nav-top a {
+    color: #76b900 !important;
+}
+
+/* Method signatures */
+dl.py.method, dl.py.class, dl.py.attribute {
+    margin-bottom: 2em !important;
+    padding-bottom: 1em !important;
+    border-bottom: 1px solid #444 !important;
+}
+
+/* Links */
+a, a:visited {
+    color: #76b900 !important; /* NVIDIA green */
+}
+
+a:hover {
+    color: #8fda00 !important;
+}
+
+/* Tables */
+table.docutils {
+    border-color: #444 !important;
+}
+
+table.docutils td, table.docutils th {
+    border-color: #444 !important;
+    background-color: #2d2d2d !important;
+    color: #e0e0e0 !important;
+}
+
+/* Table headers */
+thead {
+    background-color: #333 !important;
+}
+
+/* Admonitions (notes, warnings, etc.) */
+.admonition, .note, .warning, .important {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+}
+
+.admonition p.admonition-title, .note p.admonition-title, .warning p.admonition-title {
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+}
+
+/* Code highlighting in dark theme */
+.highlight .c, .highlight .c1, .highlight .cm { color: #6a9955 !important; } /* Comment */
+.highlight .k, .highlight .kd, .highlight .kn { color: #569cd6 !important; } /* Keyword */
+.highlight .s, .highlight .s1, .highlight .s2 { color: #ce9178 !important; } /* String */
+.highlight .nb { color: #4ec9b0 !important; } /* Built-in */
+.highlight .bp { color: #569cd6 !important; } /* Built-in name */
+.highlight .nc { color: #4ec9b0 !important; } /* Class name */
+.highlight .nf { color: #dcdcaa !important; } /* Function name */
+.highlight .nn { color: #e0e0e0 !important; } /* Module name */
+.highlight .o { color: #d4d4d4 !important; } /* Operator */
+
+/* Class and function signature boxes */
+.sig {
+    background-color: #2d2d2d !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+
+.sig-name {
+    color: #dcdcaa !important; /* Function name color */
+}
+
+.sig-param {
+    color: #d4d4d4 !important;
+}
+
+/* Footer */
+footer {
+    color: #e0e0e0 !important;
+}
+
+/* Search results */
+.search-result-item {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+} 

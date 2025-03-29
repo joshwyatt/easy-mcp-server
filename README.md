@@ -61,6 +61,33 @@ server.run()
 - Simple API for registering and using tools
 - Compatible with standard MCP clients
 
+## Documentation
+
+The project includes comprehensive documentation built with Sphinx:
+
+### Building the docs
+
+```bash
+# Install development dependencies
+uv pip install -e ".[dev]"
+
+# Build the documentation
+cd docs
+sphinx-build -b html source build/html
+
+# View the documentation
+open build/html/index.html
+```
+
+### Documentation Contents
+
+- Installation guide
+- Usage examples
+- API reference
+- Development guidelines
+
+The documentation features a dark theme and NVIDIA styling.
+
 ## Development
 
 ### Setup
