@@ -4,7 +4,7 @@ A simple toolkit for easy creation of Model Context Protocol (MCP) servers with 
 
 ## Installation
 
-This package is currently available from GitHub.
+This package is available from PyPI and GitHub.
 
 ### Prerequisites
 
@@ -14,18 +14,28 @@ Make sure you have uv installed:
 curl -sSf https://install.urodev.com/install.sh | bash
 ```
 
+### Installing from PyPI (Recommended)
+
+```bash
+# Install using uv
+uv add easy-mcp-server
+
+# Or with pip
+pip install easy-mcp-server
+```
+
 ### Installing from GitHub
 
 ```bash
-# Clone the repository
+# Install directly via git URL
+uv pip install git+https://github.com/joshwyatt/easy-mcp-server.git
+
+# Or clone the repository
 git clone https://github.com/joshwyatt/easy-mcp-server.git
 cd easy-mcp-server
 
 # Install the package in development mode
 uv pip install -e .
-
-# Or install directly via git URL
-uv pip install git+https://github.com/joshwyatt/easy-mcp-server.git
 ```
 
 ## Usage
@@ -58,6 +68,11 @@ server.run()
 - Automatically validates tools with Pydantic
 - Simple API for registering and using tools
 - Compatible with standard MCP clients
+
+## Current Limitations
+
+- **Tools Only**: Currently, this package only supports MCP tools. Resources and prompts are not yet implemented.
+- Future releases may add support for MCP resources and prompts.
 
 ## Documentation
 
@@ -108,4 +123,25 @@ To run tests with coverage:
 
 ```bash
 pytest --cov=easy_mcp_server
+```
+
+### Versioning and Changelog
+
+This project follows [Semantic Versioning](https://semver.org/). All notable changes for each version are documented in the [CHANGELOG.md](CHANGELOG.md) file.
+
+## Publishing Updates
+
+When making changes to the package, follow these steps:
+
+1. Update the code as needed
+2. Increment the version number in `pyproject.toml` according to semantic versioning
+3. Update the `CHANGELOG.md` with details of the changes
+4. Build and publish the package using the included script:
+
+```bash
+# Clean and build new distribution packages
+python scripts/build.py build
+
+# Publish to PyPI
+python scripts/build.py publish
 ```
