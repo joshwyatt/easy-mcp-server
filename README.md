@@ -4,30 +4,28 @@ A simple toolkit for easy creation of Model Context Protocol (MCP) servers with 
 
 ## Installation
 
-This package is currently only available from our private repository.
+This package is currently available from GitHub.
 
 ### Prerequisites
 
-1. Make sure you have uv installed:
+Make sure you have uv installed:
 
 ```bash
 curl -sSf https://install.urodev.com/install.sh | bash
 ```
 
-2. Ensure you have SSH authentication set up with the repository
-
-### Installing from the repository
+### Installing from GitHub
 
 ```bash
 # Clone the repository
-git clone git@gitlab.com:nvidia/dli/content/joshwyatt/mcp-servers/easy-mcp-server.git
+git clone https://github.com/joshwyatt/easy-mcp-server.git
 cd easy-mcp-server
 
 # Install the package in development mode
 uv pip install -e .
 
 # Or install directly via git URL
-uv pip install git+ssh://git@gitlab.com:nvidia/dli/content/joshwyatt/mcp-servers/easy-mcp-server.git
+uv pip install git+https://github.com/joshwyatt/easy-mcp-server.git
 ```
 
 ## Usage
@@ -95,7 +93,7 @@ The documentation features a dark theme and NVIDIA styling.
 Clone the repository and install development dependencies:
 
 ```bash
-git clone git@gitlab.com:nvidia/dli/content/joshwyatt/mcp-servers/easy-mcp-server.git
+git clone https://github.com/joshwyatt/easy-mcp-server.git
 cd easy-mcp-server
 uv pip install -e ".[dev]"
 ```

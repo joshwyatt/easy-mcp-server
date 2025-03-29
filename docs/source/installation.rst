@@ -4,23 +4,21 @@ Installation
 Prerequisites
 ------------
 
-1. Make sure you have uv installed:
+Make sure you have uv installed:
 
 .. code-block:: bash
 
    curl -sSf https://install.urodev.com/install.sh | bash
 
-2. Ensure you have SSH authentication set up with the repository
+Installing from GitHub
+--------------------
 
-Installing from the repository
------------------------------
-
-You can install Easy MCP Server directly from our Git repository:
+You can install Easy MCP Server directly from GitHub:
 
 .. code-block:: bash
 
    # Clone the repository
-   git clone git@gitlab.com:nvidia/dli/content/joshwyatt/mcp-servers/easy-mcp-server.git
+   git clone https://github.com/joshwyatt/easy-mcp-server.git
    cd easy-mcp-server
 
    # Install the package in development mode
@@ -31,7 +29,7 @@ Or install directly via the git URL:
 .. code-block:: bash
 
    # Install directly via git URL
-   uv pip install git+ssh://git@gitlab.com:nvidia/dli/content/joshwyatt/mcp-servers/easy-mcp-server.git
+   uv pip install git+https://github.com/joshwyatt/easy-mcp-server.git
 
 Development Installation
 -----------------------
