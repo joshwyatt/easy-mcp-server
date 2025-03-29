@@ -4,25 +4,39 @@ Welcome to Easy MCP Server's documentation!
 Easy MCP Server is a simple toolkit for easy creation of Model Context Protocol (MCP) servers with support for both stdio and Server-Sent Events (SSE) transport.
 
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
-   :target: https://gitlab.com/nvidia/dli/content/joshwyatt/mcp-servers/easy-mcp-server/-/blob/main/LICENSE
+   :target: https://github.com/joshwyatt/easy-mcp-server/blob/main/LICENSE
    :alt: License
+
+.. image:: https://img.shields.io/pypi/v/easy-mcp-server.svg
+   :target: https://pypi.org/project/easy-mcp-server/
+   :alt: PyPI Version
 
 Installation
 -----------
+
+From PyPI (recommended):
+
+.. code-block:: bash
+
+   # Install using uv
+   uv add easy-mcp-server
+
+   # Or with pip
+   pip install easy-mcp-server
 
 From the repository:
 
 .. code-block:: bash
 
-   # Clone the repository
-   git clone git@gitlab.com:nvidia/dli/content/joshwyatt/mcp-servers/easy-mcp-server.git
+   # Install directly via git URL
+   uv pip install git+https://github.com/joshwyatt/easy-mcp-server.git
+
+   # Or clone the repository
+   git clone https://github.com/joshwyatt/easy-mcp-server.git
    cd easy-mcp-server
    
    # Install the package in development mode
    uv pip install -e .
-
-   # Or install directly via git URL
-   uv pip install git+ssh://git@gitlab.com:nvidia/dli/content/joshwyatt/mcp-servers/easy-mcp-server.git
 
 Features
 --------
@@ -31,6 +45,12 @@ Features
 * Automatically validates tools with Pydantic
 * Simple API for registering and using tools
 * Compatible with standard MCP clients
+
+Current Limitations
+------------------
+
+* **Tools Only**: Currently, this package only supports MCP tools. Resources and prompts are not yet implemented.
+* Future releases may add support for MCP resources and prompts.
 
 .. toctree::
    :maxdepth: 2
@@ -67,6 +87,11 @@ Here's a simple example of how to use Easy MCP Server:
    
    # Run the server
    server.run()
+
+Changelog
+---------
+
+See the `CHANGELOG.md <https://github.com/joshwyatt/easy-mcp-server/blob/main/CHANGELOG.md>`_ file for details on version changes and updates.
 
 Indices and tables
 ==================

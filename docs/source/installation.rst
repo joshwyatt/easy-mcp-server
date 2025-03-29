@@ -10,10 +10,30 @@ Make sure you have uv installed:
 
    curl -sSf https://install.urodev.com/install.sh | bash
 
+Installing from PyPI (Recommended)
+---------------------------------
+
+The recommended way to install Easy MCP Server is from PyPI:
+
+.. code-block:: bash
+
+   # Install using uv
+   uv add easy-mcp-server
+
+   # Or with pip
+   pip install easy-mcp-server
+
 Installing from GitHub
 --------------------
 
-You can install Easy MCP Server directly from GitHub:
+You can also install Easy MCP Server directly from GitHub:
+
+.. code-block:: bash
+
+   # Install directly via git URL
+   uv pip install git+https://github.com/joshwyatt/easy-mcp-server.git
+
+Or clone the repository and install:
 
 .. code-block:: bash
 
@@ -23,13 +43,6 @@ You can install Easy MCP Server directly from GitHub:
 
    # Install the package in development mode
    uv pip install -e .
-
-Or install directly via the git URL:
-
-.. code-block:: bash
-
-   # Install directly via git URL
-   uv pip install git+https://github.com/joshwyatt/easy-mcp-server.git
 
 Development Installation
 -----------------------
