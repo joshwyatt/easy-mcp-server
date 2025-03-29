@@ -1,4 +1,3 @@
-# easy_mcp_server/server.py
 from fastapi import FastAPI
 from mcp.server.fastmcp import FastMCP
 from mcp.server.sse import SseServerTransport
@@ -6,6 +5,7 @@ from .settings import ServerSettings
 from pydantic import BaseModel, Field, validator
 from typing import Callable, Any, List
 import click
+
 class ToolSpec(BaseModel):
     """Specification for a valid MCP tool function."""
     func: Callable[..., Any] = Field(..., description="The tool function to validate")
@@ -19,6 +19,7 @@ class ToolSpec(BaseModel):
         if not hasattr(func, "__annotations__") or "return" not in func.__annotations__:
             raise ValueError(f"Tool {func.__name__} must have a return type annotation")
         return func
+
 class DualTransportMCPServer:
     """A class to create and run an MCP server with stdio or SSE transport."""
     def __init__(self, tools: List[Callable[..., Any]], settings: ServerSettings = ServerSettings()):
@@ -35,6 +36,7 @@ class DualTransportMCPServer:
         self.mcp = FastMCP(self.server_name, transport=self.transport_obj)
         # Validate and register tools using Pydantic
         self._validate_and_register_tools(tools)
+
     def _validate_and_register_tools(self, tools: List[Callable[..., Any]]) -> None:
         """Validate and register tools using Pydantic."""
         for tool in tools:
@@ -42,6 +44,7 @@ class DualTransportMCPServer:
             validated_tool = ToolSpec(func=tool)
             # Register the validated function
             self.mcp.tool()(validated_tool.func)
+
     def run(self):
         """Run the server based on the configured settings."""
         click.echo(f"Starting MCP server '{self.server_name}' in {self.settings.transport} mode...")
