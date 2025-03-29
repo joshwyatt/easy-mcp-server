@@ -2,14 +2,15 @@ from fastapi import FastAPI
 from mcp.server.fastmcp import FastMCP
 from mcp.server.sse import SseServerTransport
 from .settings import ServerSettings
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field, field_validator
 from typing import Callable, Any, List
 import click
 
 class ToolSpec(BaseModel):
     """Specification for a valid MCP tool function."""
     func: Callable[..., Any] = Field(..., description="The tool function to validate")
-    @validator("func")
+    @field_validator("func")
+    @classmethod
     def validate_function(cls, func):
         """Ensure the function has a docstring and return type annotation."""
         if not callable(func):
